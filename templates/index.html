@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles2.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid fixed-top" style="background-color: white;">
+        <header class="d-flex flex-wrap justify-content-center py-3 border-bottom border-primary-subtle">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="/static/images/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-3">
+            <span class="fs-4 heading-text">IIT INDORE CSE</span>
+          </a>
+          <form action="" method="post"> 
+                <a href="{{url_for('logout')}}" class="btn btn-outline-primary ms-3">Logout</a>
+          </form>
+        </header>
+      </div>
+    <div class="welcome border-bottom border-primary-subtle">
+        <img src="/static/images/logo.png" alt="IIT Indore logo" id="logo">
+        <div class="message">WELCOME TO IIT INDORE {{user['userId']}}!</div>
+    </div>
+    
+    <h1 class="heading-text border-bottom border-primary-subtle" id="master-heading">Courses offered by IIT Indore for CSE Branch</h1>
+    <div class="main">
+        <div class="data">
+            <h1 class="py-5 heading-text">Semester III</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ZZ 2XX</th>
+                        <td>Course-I for Minor Program</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MA 205</th>
+                        <td>Complex Analysis</td>
+                        <td><span class="tab">3-1-0</span>(1/2 semester)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MA 207</th>
+                        <td>Differential Equations-II</td>
+                        <td><span class="tab">3-1-0</span>(1/2 semester)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 201</th>
+                        <td>Discrete Mathematical Structures</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 203</th>
+                        <td>Data Structures and Algorithms</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 207</th>
+                        <td>Database and Information Systems</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 209</th>
+                        <td>Logic Design</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 253</th>
+                        <td>Data Structures and Algorithms Lab</td>
+                        <td>0-0-3</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 257</th>
+                        <td>Database and Information Systems Lab</td>
+                        <td>0-0-3</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 2XX</th>
+                        <td>Department Elective I</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td>11-4-8 **</td>
+                        <td>22/25</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="py-5 heading-text">Semester IV</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ZZ 2XX</th>
+                        <td>Course-II for Minor Program</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MA 204N</th>
+                        <td>Numerical Methods</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 202</th>
+                        <td>Automata Theory and Logic</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 204</th>
+                        <td>Design and Analysis of Algorithms</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 210</th>
+                        <td>Computer Architecture</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 254</th>
+                        <td>Design and Analysis of Algorithms Lab</td>
+                        <td>0-0-3</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 264</th>
+                        <td>Computer Architecture Lab</td>
+                        <td>0-0-3</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 2XX</th>
+                        <td>Department Elective II</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 2XX</th>
+                        <td>Institute Elective-I</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td>8-3-8</td>
+                        <td>21/24</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="py-5 heading-text">Semester V</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ZZ 3XX</th>
+                        <td>Course III - Minor Program</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 303</th>
+                        <td>Operating Systems</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 307</th>
+                        <td>Optimization Algorithms and Techniques</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 311</th>
+                        <td>Parallel Computing</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 313</th>
+                        <td>Computer Networks</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 353N</th>
+                        <td>Operating Systems Lab</td>
+                        <td>0-0-2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 357N</th>
+                        <td>Optimization Algorithms and Techniques Lab</td>
+                        <td>0-0-2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 3XX</th>
+                        <td>Department Elective III</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 3XX</th>
+                        <td>Institute Elective II</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td>8-2-8</td>
+                        <td>20/23</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="py-5 heading-text">Semester VI</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ZZ 3XX</th>
+                        <td>Course IV - Minor Program</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 302N</th>
+                        <td>Computer Graphics and Visualization</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 304N</th>
+                        <td>Computational Intelligence</td>
+                        <td>2-1-0</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 308N</th>
+                        <td>Compiler Techniques</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 310</th>
+                        <td>Software Engineering</td>
+                        <td>2-0-2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 354N</th>
+                        <td>Computational Intelligence Lab</td>
+                        <td>0-0-3</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 3XX</th>
+                        <td>Departmental Elective IV</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 3XX</th>
+                        <td>Departmental Elective V</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 3XX</th>
+                        <td>Institute Elective III</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td>8-1-9</td>
+                        <td>22.5/25.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="py-5 heading-text">Semester VII</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ZZ 4XX</th>
+                        <td>Course-V for Minor Program</td>
+                        <td>x-x-x</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 493N</th>
+                        <td>B Tech Project (BTP)</td>
+                        <td>0-0-32</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 495</th>
+                        <td>Internship - I</td>
+                        <td>x-x-x</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 497</th>
+                        <td>Internship - II</td>
+                        <td>x-x-x</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td>0-0-32</td>
+                        <td>18/20</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="py-5 heading-text">Semester VIII</h1>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Weekly Contact Hours L-T-P</th>
+                        <th scope="col">Total Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">CS 4XX</th>
+                        <td>Department Elective VI</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CS 4XX</th>
+                        <td>Department Elective VII</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 4XX</th>
+                        <td>Institute Elective IV</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 4XX</th>
+                        <td>Institute Elective V</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ZZ 4XX</th>
+                        <td>Institute Elective VI</td>
+                        <td>x-x-x</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Total</th>
+                        <td></td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>

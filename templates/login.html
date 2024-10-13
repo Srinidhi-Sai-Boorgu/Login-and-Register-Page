@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <img src="/static/images/logo.png" id="logo" alt="IIT INDORE LOGO">
+    <form id="login-box" action="{{url_for('login')}}" method="post">
+        <h2 id="heading">LOGIN TO YOUR <br> ACCOUNT</h2>
+        <div class="message">
+            {{message}}
+        </div>
+        <div class="input-group">
+            <label class="input-tag">USER ID</label>
+                <input type="text" name="userId" class="text" placeholder="Enter your User ID">            
+        </div>
+        <div class="input-group">
+            <label class="input-tag">PASSWORD</label>
+            <input type="password" name="password" class="text" placeholder="Enter your Password">
+        </div>
+        <input type="submit" class="login-button" value="LOGIN">
+        <h5 class="redirect">Don't have an account? <a href="{{url_for('register')}}">Register</a></h5>
+    </form>
+</body>
+</html>
